@@ -1,0 +1,12 @@
+.git
+.venv
+__pycache__
+.pytest_cache
+*.pyc
+claims.db
+scratch_claims.db
+eval_claims.db
+frontend/node_modules
+frontend/dist
+app/generated/uploads
+app/generated/evals
