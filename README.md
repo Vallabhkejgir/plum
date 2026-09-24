@@ -89,11 +89,6 @@ curl -X POST http://127.0.0.1:8000/api/evals/run \
 
 The backend writes the latest Markdown report to `docs/eval-report.md`.
 
-## Deployment
-
-- `Dockerfile` builds the frontend and serves the full app from one container.
-- `render.yaml` configures a free Render web service using the Docker deploy path.
-
 ## Docs
 
 - [Architecture](docs/architecture.md)

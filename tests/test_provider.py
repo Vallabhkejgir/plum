@@ -57,8 +57,8 @@ def _settings(tmp_path: Path) -> Settings:
         turing_basic_auth="Basic test",
         turing_provider="openai",
         turing_upload_module="PLAYGROUND",
-        turing_multimodal_model="gpt-4",
-        turing_text_model="gpt-4",
+        turing_multimodal_model="gemini-flash-latest",
+        turing_text_model="gemini-flash-latest",
         app_env="test",
     )
 
