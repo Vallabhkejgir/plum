@@ -66,7 +66,7 @@ def get_settings() -> Settings:
             default="0c015800-dcba-448d-94bb-d01a56b0d22c",
         ),
         turing_basic_auth=_basic_auth_value(),
-        turing_provider=_env("TURING_PROVIDER", default="openai"),
+        turing_provider=_env("TURING_PROVIDER", default="google"),
         turing_upload_module=_env("TURING_UPLOAD_MODULE", default="PLAYGROUND"),
         turing_multimodal_model=_env("TURING_MULTIMODAL_MODEL"),
         turing_text_model=_env("TURING_TEXT_MODEL"),
