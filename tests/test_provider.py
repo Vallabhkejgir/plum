@@ -55,7 +55,7 @@ def _settings(tmp_path: Path) -> Settings:
         turing_api_key="api-key",
         turing_api_gateway_key="gw-key",
         turing_basic_auth="Basic test",
-        turing_provider="openai",
+        turing_provider="google",
         turing_upload_module="PLAYGROUND",
         turing_multimodal_model="gemini-flash-latest",
         turing_text_model="gemini-flash-latest",
