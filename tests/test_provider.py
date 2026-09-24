@@ -87,7 +87,9 @@ async def test_extract_document_uses_upload_then_chat_for_images(tmp_path, monke
 
     import app.services.provider as provider_module
 
-    monkeypatch.setattr(provider_module.httpx, "AsyncClient", lambda timeout: fake_client)
+    monkeypatch.setattr(
+        provider_module.httpx, "AsyncClient", lambda timeout: fake_client
+    )
 
     client = TuringGatewayClient(_settings(tmp_path))
     result = await client.extract_document(image_path, "What is in this image?")
@@ -112,11 +114,7 @@ async def test_extract_document_uses_document_file_id_for_pdfs(tmp_path, monkeyp
             _FakeResponse(
                 {
                     "choices": [
-                        {
-                            "message": {
-                                "content": '{"summary":"Document summary"}'
-                            }
-                        }
+                        {"message": {"content": '{"summary":"Document summary"}'}}
                     ]
                 }
             ),
@@ -125,7 +123,9 @@ async def test_extract_document_uses_document_file_id_for_pdfs(tmp_path, monkeyp
 
     import app.services.provider as provider_module
 
-    monkeypatch.setattr(provider_module.httpx, "AsyncClient", lambda timeout: fake_client)
+    monkeypatch.setattr(
+        provider_module.httpx, "AsyncClient", lambda timeout: fake_client
+    )
 
     client = TuringGatewayClient(_settings(tmp_path))
     await client.extract_document(pdf_path, "Summarize this document")
@@ -134,4 +134,3 @@ async def test_extract_document_uses_document_file_id_for_pdfs(tmp_path, monkeyp
         "type": "document_file_id",
         "document_file_id": "PLAYGROUND_document.pdf",
     }
-
